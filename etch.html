@@ -21,16 +21,17 @@
             <h3 id="system1">ToadBoy</h3>
         </div>
         <div class="buttons">
-            <button>Black</button>
-            <button>Blue</button>
-            <button>Red</button>
-            <button>Rainbow</button>
+            <button class="colorB" onclick="changeColor('black')">Black</button>
+            <button class="colorB" onclick="changeColor('blue')">Blue</button>
+            <button class="colorB" onclick="changeColor('red')">Red</button>
+            <button class="colorB" onclick="changeColor('random')">Rainbow</button>
         </div>
-        <div class="slider">
-
+        <div class="slider" id="slider">
+            <button class="shades" onclick="darkenBtn()">Darken</button>
+            <button class="shades" onclick="lightenBtn()">Lighten</button>
         </div>
         <div class="erase">
-            <button>Reset</button>
+            <button class="reset" onclick="resetContain()">Reset</button>
         </div>
         <div class="speaker">
             <h4 id="dots">........<br>........<br>........<br>........<br>........<br>........<br>........<br>........</h4>
