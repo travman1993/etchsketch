@@ -3,39 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="etch.css">
-    <style src="etch.js" defer></style>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="etch.css"/>
+    <title>Sketch</title>
 </head>
 <body>
-    <h1>Drawl Away!!</h1>
-    <div class="sketch-pad">
-        <div class="border">
-            <div class="container"></div>
-            <div class="title">
-                <h2 id="title1">BigTrav</h2>
-                <h2 id="title2">COLOR</h2>    
-            </div>             
-        </div>
-        <div class="system">
-            <h3 id="system1">ToadBoy</h3>
-        </div>
+    <div class="flex-container">
+       <div class="title"><h1>SketchBoard</h1></div>
+       <div class="mode">Mode: Coloring</div>
+       <div class="content">
+        <div class="board"></div>
         <div class="buttons">
-            <button class="colorB" onclick="changeColor('black')">Black</button>
-            <button class="colorB" onclick="changeColor('blue')">Blue</button>
-            <button class="colorB" onclick="changeColor('red')">Red</button>
-            <button class="colorB" onclick="changeColor('random')">Rainbow</button>
+            <button class="blackButton" onclick="changeColor('black')">
+                Black
+            </button>
+            <button class="erasorButton" onclick="changeColor('white')">
+                Eraser
+            </button>
+            <button class="randomButtton" onclick="changeColor('random')">
+                Random
+            </button>
+            <button onclick="resetBoard()">Reset</button>
         </div>
-        <div class="slider" id="slider">
-            <button class="shades" onclick="darkenBtn()">Darken</button>
-            <button class="shades" onclick="lightenBtn()">Lighten</button>
-        </div>
-        <div class="erase">
-            <button class="reset" onclick="resetContain()">Reset</button>
-        </div>
-        <div class="speaker">
-            <h4 id="dots">........<br>........<br>........<br>........<br>........<br>........<br>........<br>........</h4>
-        </div>
+        <imput 
+         type="text" 
+         placeholder="Size of Board" 
+         value="16" 
+         onchange="changeSize(this.value)"
+        />
+        <button>Set Size</button>
+       </div>
+       <div class="error">Input between 2 and 100</div> 
     </div>
 </body>
+<script src="etch.js"></script>
 </html>
